@@ -39,3 +39,8 @@ function shrinkBall(elBall, minDiameter) {
     elBall.style.lineHeight = ballSize + 'px'
     elBall.innerText = ballSize
 }   
+
+function onBall5Click() {
+    const elBody = document.querySelector('body')
+    elBody.style.backgroundColor = getRandomColor()
+}
