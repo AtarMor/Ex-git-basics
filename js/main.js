@@ -13,3 +13,10 @@ function onBallClick(elBall, maxDiameter) {
 
     elBall.style.backgroundColor = getRandomColor()
 }
+
+function onBall3Click() {
+    const elBall1 = document.querySelector('.ball1')
+    const elBall2 = document.querySelector('.ball2')
+    onBallClick(elBall1, 400)
+    onBallClick(elBall2, 300)
+}

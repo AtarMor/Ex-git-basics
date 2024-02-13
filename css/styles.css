@@ -7,8 +7,7 @@ h1 {
     color: white;
 }
 
-.ball,
-.ball2 {
+.ball {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -19,11 +18,16 @@ h1 {
     transition: 1s;
 }
 
-.ball {
+.ball1 {
     background-color: rgb(222, 170, 239);
 }
 
 .ball2 {
     background-color: rgb(139, 160, 218);
+    margin-top: 20px;
+}
+
+.ball3 {
+    background-color: rgb(80, 125, 249);
     margin-top: 20px;
 }
