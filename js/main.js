@@ -1,5 +1,7 @@
 'use strict'
 
+var gInterval
+
 function onBallClick(elBall, maxDiameter) {
     var ballSize = +elBall.innerText
     const addSize = getRandomInt(20, 60)
@@ -38,7 +40,7 @@ function shrinkBall(elBall, minDiameter) {
     elBall.style.height = ballSize + 'px'
     elBall.style.lineHeight = ballSize + 'px'
     elBall.innerText = ballSize
-}   
+}
 
 function onBall5Click() {
     const elBody = document.querySelector('body')
@@ -54,4 +56,23 @@ function onBall6Click() {
 
     elBall1.style.backgroundColor = 'rgb(222, 170, 239)'
     elBall2.style.backgroundColor = 'rgb(139, 160, 218)'
+}
+
+function onBall6Hover() {
+    var count
+    gInterval = setInterval(() => {
+        const elBall1 = document.querySelector('.ball1')
+        const elBall2 = document.querySelector('.ball2')
+        onBallClick(elBall1, 400)
+        onBallClick(elBall2, 300)
+        onBall3Click()
+        onBall4Click() 
+        count++
+        if (count === 10) clearInterval(gInterval)
+
+    }, 2000)
+}
+
+function onBall6MouseOut() {
+    clearInterval(gInterval)
 }
